@@ -62,6 +62,25 @@
                     </div>
 
                     <div class="input-group mb-3">
+                        <select class="form-control" name="lokasi" aria-label="Default select example" required>
+                            <option value="">Pilih Lokasi</option>
+                            <option value="Padang">Padang</option>
+                            <option value="Bukitinggi">Bukitinggi</option>
+                            <option value="Payakumbuah">Payakumbuah</option>
+                            <option value="Pesisir Selatan">Pesisir Selatan</option>
+                            <option value="Agam">Agam</option>
+                            <option value="Sijunjung">Sijunjung</option>
+                        </select>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                {{-- <i class="fas fa-mobile-alt"></i> --}}
+                                {{-- <i class="fas-solid fa-location-dot"></i> --}}
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
                         <textarea class="form-control" name="alamat" placeholder="alamat" id="floatingTextarea"
                             required></textarea>
                     </div>

@@ -53,14 +53,7 @@
                                         @csrf
                                         <input type="hidden" name="id_produk" value="{{ $detail_produk->id_produk }}">
                                         <label>Jumlah</label>
-                                        <select class="form-control" name="kuantiti" aria-label="Default select example"
-                                            required>
-                                            <option selected>Pilih Kuantiti</option>
-                                            @for ($kuantiti = 1; $kuantiti <= $detail_produk->jumlah_produk;)
-                                                <option>{{ $kuantiti++ }}</option>
-
-                                            @endfor
-                                        </select>
+                                        <input type="text" class="form-control" name="kuantiti">
                                         <br>
 
                                         <button type="submit" class="btn btn-primary">Pesan</button>

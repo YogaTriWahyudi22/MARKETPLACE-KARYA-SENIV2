@@ -79,6 +79,7 @@ class AuthController extends Controller
         $register->password = Hash::make($request->password);
         $register->nohp = $request->nohp;
         $register->alamat = $request->alamat;
+        $register->lokasi = $request->lokasi;
         $register->status = $request->status;
         $register->save();
 

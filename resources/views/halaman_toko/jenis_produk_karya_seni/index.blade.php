@@ -15,7 +15,6 @@
                     <div class="alert alert-primary">
                         {{ session('berhasil') }}
                     </div>
-
                 @endif
                 <div class="row mb-2">
                     <div class="col-sm-6">
@@ -65,12 +64,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <tr class="text-center">
-                                    <th>NO</th>
-                                    <th>Jenis Karya Seni</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

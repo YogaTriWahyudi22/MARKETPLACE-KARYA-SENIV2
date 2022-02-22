@@ -17,7 +17,7 @@ class ProdukController extends Controller
     public function index()
     {
         $produk = Produk::leftjoin('users', 'produk.distributor_produk', '=', 'users.id')->leftjoin('jenis_karya_seni', 'produk.jenis_karya_seni', '=', 'jenis_karya_seni.id_jenis')
-            ->select('produk.*', 'users.*', 'jenis_karya_seni.jenis_karya_seni as jenis_karya')->where('distributor_produk', Auth::user()->id)->get();
+            ->select('produk.*', 'jenis_karya_seni.jenis_karya_seni as jenis_karya')->where('distributor_produk', Auth::user()->id)->get();
         return view('halaman_toko.produk.index', compact('produk'));
     }
 
@@ -147,5 +147,18 @@ class ProdukController extends Controller
         unlink(public_path('gambar/' . $delete->photo));
         session()->flash('status', 'Data Berhasil dihapus');
         return redirect()->route('produk');
+    }
+
+    public function lokasi_produk($lokasi)
+    {
+        $produk = Produk::leftjoin('users', 'produk.distributor_produk', '=', 'users.id')->leftjoin('jenis_karya_seni', 'produk.jenis_karya_seni', '=', 'jenis_karya_seni.id_jenis')
+            ->where('lokasi', $lokasi)
+            ->select('users.name', 'produk.*')
+            ->get();
+        $lokasi = Produk::leftjoin('users', 'produk.distributor_produk', '=', 'users.id')->leftjoin('jenis_karya_seni', 'produk.jenis_karya_seni', '=', 'jenis_karya_seni.id_jenis')
+            ->where('lokasi', $lokasi)
+            ->select('users.name', 'users.lokasi')
+            ->first();
+        return view('halaman_user.home.lokasi', compact('produk', 'lokasi'));
     }
 }

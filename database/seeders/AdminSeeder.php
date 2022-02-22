@@ -20,6 +20,7 @@ class AdminSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => Hash::make('admin'),
             'alamat' => 'Kota Padang',
+            'lokasi' => 'Padang',
             'nohp' => '08123456789',
             'status' => 'admin',
         ]);

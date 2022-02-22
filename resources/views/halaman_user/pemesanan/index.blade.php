@@ -115,11 +115,11 @@
                                             <td></td>
                                             <td>
                                                 <div class="wc-proceed-to-checkout">
-
-                                                    @if ($button->status == 'konfirmasi')
-
-                                                        <a href="{{ route('proses_pembayaran') }}">
-                                                            Pembayaran</a>
+                                                    @if (isset($pesan->status))
+                                                        @if ($button->status == 'konfirmasi')
+                                                            <a href="{{ route('proses_pembayaran') }}">
+                                                                Pembayaran</a>
+                                                        @endif
                                                     @endif
                                                 </div>
                                             </td>
@@ -132,5 +132,4 @@
                 </div>
             </div>
         </div>
-
     @endsection

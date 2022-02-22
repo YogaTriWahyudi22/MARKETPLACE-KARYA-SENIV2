@@ -15,7 +15,6 @@
                     <div class="alert alert-primary">
                         {{ session('berhasil') }}
                     </div>
-
                 @endif
                 <div class="row mb-2">
                     <div class="col-sm-6">
@@ -80,18 +79,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>NO</th>
-                                    <th>Nama Produk</th>
-                                    <th>Gambar Produk</th>
-                                    <th>Jumlah Produk</th>
-                                    <th>Harga</th>
-                                    <th>Distributor</th>
-                                    <th>Diskon</th>
-                                    <th>Aksi</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

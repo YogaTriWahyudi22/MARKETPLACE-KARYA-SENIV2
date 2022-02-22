@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email', '50')->unique();
             $table->string('password');
             $table->string('alamat');
+            $table->string('lokasi', '50');
             $table->string('nohp', '12');
             $table->string('status', '20')->default('user');
             $table->string('photo', '50')->default('admin.jpg');

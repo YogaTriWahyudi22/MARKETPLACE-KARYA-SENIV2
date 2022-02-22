@@ -69,6 +69,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::POST('edit/{id_produk}', [ProdukController::class, 'update'])->name('produk_edit');
         Route::DELETE('delete/{id_produk}', [ProdukController::class, 'destroy'])->name('produk_delete');
         Route::get('detail/{id_produk}', [ProdukController::class, 'show'])->name('detail');
+        Route::get('lokasi_produk/{lokasi}', [ProdukController::class, 'lokasi_produk'])->name('lokasi_produk');
     });
 
     Route::prefix('jenis_karya')->group(function () {

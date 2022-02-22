@@ -44,8 +44,10 @@
 
                         <div class="mb-3">
                             <label class="form-label">Satuan Produk</label><br>
-                            <input type="text" name="satuan" class="form-control" placeholder="Input Satuan Produk"
-                                required>
+                            <select class="form-control" name="satuan" aria-label="Default select example" required>
+                                <option value="">Pilih Satuan Produk</option>
+                                <option value="Buah">Buah</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">
@@ -56,7 +58,8 @@
 
                         <div class="mb-3">
                             <label class="form-label">Jenis Karya Seni</label><br>
-                            <select class="form-control" name="jenis_karya_seni" aria-label="Default select example">
+                            <select class="form-control" name="jenis_karya_seni" aria-label="Default select example"
+                                required>
                                 <option selected>Pilih Jenis Karya Seni</option>
                                 @foreach ($tambah_jenis as $jenis)
                                     <option value="{{ $jenis->id_jenis }}">{{ $jenis->jenis_karya_seni }}</option>
